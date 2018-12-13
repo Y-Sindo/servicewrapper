@@ -1,0 +1,3 @@
+# 配置
+需修改config.js中的analyzeServer和wrapServer变量
+开源时需要删去高分服务器的地址
