@@ -34,8 +34,6 @@ def get_text_from_rank(htm, rank):
 这里会把同一级的元素全都算进去，就算他们结构不同
 因为，级别用lid表示，每一层都独一无二，所以错误率很低！！
 """
-
-
 class Segment:
     def __init__(self, log, form_check=0, form_path="form_list.json"):
         options = webdriver.ChromeOptions()

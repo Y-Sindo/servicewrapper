@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7727eaba-94f5-4f8b-b69c-583d42edcff5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/WebSegment.iml" afterPath="$PROJECT_DIR$/.idea/WebSegment.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/call/app/__init__.py" afterPath="$PROJECT_DIR$/call/app/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/call/app/controllers/__init__.py" afterPath="$PROJECT_DIR$/call/app/controllers/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/call/app/controllers/task.py" afterPath="$PROJECT_DIR$/call/app/controllers/ServiceInvokeController.py" />
-      <change beforePath="$PROJECT_DIR$/call/app/service/ConnectMySQL.py" afterPath="$PROJECT_DIR$/call/app/service/ConnectMySQL.py" />
-      <change beforePath="$PROJECT_DIR$/call/app/service/Service.py" afterPath="$PROJECT_DIR$/call/app/service/Service.py" />
-      <change beforePath="$PROJECT_DIR$/call/app/service/flask2.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/call/app/setting.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/call/flask2.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/call/requirements.txt" afterPath="$PROJECT_DIR$/call/requirements.txt" />
-      <change beforePath="$PROJECT_DIR$/call/run.py" afterPath="$PROJECT_DIR$/call/run.py" />
-      <change beforePath="$PROJECT_DIR$/call/upload-server.sh" afterPath="$PROJECT_DIR$/call/upload-server.sh" />
-      <change beforePath="$PROJECT_DIR$/extraction/crawl.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/demo.py" afterPath="$PROJECT_DIR$/extraction/segment_demo.py" />
-      <change beforePath="$PROJECT_DIR$/extraction/driver/chromedriver" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/driver/chromedriver.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/form_demo.py" afterPath="$PROJECT_DIR$/extraction/form_demo.py" />
-      <change beforePath="$PROJECT_DIR$/extraction/form_list.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/nlp_invoke/manage.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/newtest.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/run.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/settings.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/urls.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/uwsgi.ini" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/view.py" afterPath="$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/view.py" />
-      <change beforePath="$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/wsgi.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/nlp_invoke/uwsgi.ini" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/run.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/seg_shot.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/extraction/test.html" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,118 +17,7 @@
     <SUITE FILE_PATH="coverage/WebSegment$crawl.coverage" NAME="crawl Coverage Results" MODIFIED="1539937684567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="view.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/view.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="45" column="70" lean-forward="false" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServiceExtractController.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/call/app/controllers/ServiceExtractController.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-                <marker date="1544705385997" expanded="true" signature="1393:1740" ph="..." />
-                <marker date="1544705385997" expanded="true" signature="1706:1740" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/call/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="segment_demo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/call/app/service/segment_demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/call/app/service/form.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form_demo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/call/app/service/form_demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1544701865198" expanded="true" signature="0:68" ph="import ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setting.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extraction/setting.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="19" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="segment_demo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extraction/segment_demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="segment.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extraction/segment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="623" column="39" lean-forward="false" selection-start-line="623" selection-start-column="39" selection-end-line="623" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setting.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/call/app/service/setting.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -245,7 +102,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="266" />
     <option name="y" value="417" />
     <option name="width" value="1440" />
@@ -279,65 +136,7 @@
             <path>
               <item name="serviceWrapper" type="b2602c69:ProjectViewProjectNode" />
               <item name="serviceWrapper" type="462c0819:PsiDirectoryNode" />
-              <item name="call" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serviceWrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serviceWrapper" type="462c0819:PsiDirectoryNode" />
-              <item name="call" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serviceWrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serviceWrapper" type="462c0819:PsiDirectoryNode" />
-              <item name="call" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serviceWrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serviceWrapper" type="462c0819:PsiDirectoryNode" />
-              <item name="call" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serviceWrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serviceWrapper" type="462c0819:PsiDirectoryNode" />
-              <item name="call" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="lcypytools" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serviceWrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serviceWrapper" type="462c0819:PsiDirectoryNode" />
-              <item name="call" type="462c0819:PsiDirectoryNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serviceWrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serviceWrapper" type="462c0819:PsiDirectoryNode" />
-              <item name="extraction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serviceWrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serviceWrapper" type="462c0819:PsiDirectoryNode" />
-              <item name="extraction" type="462c0819:PsiDirectoryNode" />
-              <item name="lcypytools" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serviceWrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serviceWrapper" type="462c0819:PsiDirectoryNode" />
-              <item name="extraction" type="462c0819:PsiDirectoryNode" />
-              <item name="nlp_invoke" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="serviceWrapper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="serviceWrapper" type="462c0819:PsiDirectoryNode" />
-              <item name="extraction" type="462c0819:PsiDirectoryNode" />
-              <item name="nlp_invoke" type="462c0819:PsiDirectoryNode" />
-              <item name="nlp_invoke" type="462c0819:PsiDirectoryNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -490,21 +289,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="266" y="417" width="1440" height="821" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="824" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3319559" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25679544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33058986" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26037195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -662,41 +461,14 @@
     <entry file="file://$PROJECT_DIR$/segment.py" />
     <entry file="file://$PROJECT_DIR$/nlp_invoke/nlp_invoke/view.py" />
     <entry file="file://$PROJECT_DIR$/call/flask2.log" />
-    <entry file="file://$PROJECT_DIR$/call/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/call/README.md" />
+    <entry file="file://$PROJECT_DIR$/call/app/__init__.py" />
     <entry file="file://$PROJECT_DIR$/extraction/seg_shot.png" />
     <entry file="file://$PROJECT_DIR$/extraction/run.log" />
     <entry file="file://$PROJECT_DIR$/extraction/test.html" />
     <entry file="file://$PROJECT_DIR$/extraction/form_list.json" />
-    <entry file="file://$PROJECT_DIR$/extraction/README_old.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4186">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extraction/lcypytools/mongo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/extraction/README_old.md" />
+    <entry file="file://$PROJECT_DIR$/extraction/lcypytools/mongo.py" />
     <entry file="file://$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/uwsgi.ini" />
     <entry file="file://$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/settings.py" />
     <entry file="file://$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/urls.py" />
@@ -707,188 +479,27 @@
     <entry file="file://$PROJECT_DIR$/extraction/nlp_invoke/manage.py" />
     <entry file="file://$PROJECT_DIR$/extraction/nlp_invoke/uwsgi.ini" />
     <entry file="file://$PROJECT_DIR$/extraction/crawl.py" />
-    <entry file="file://$PROJECT_DIR$/extraction/form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extraction/form_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extraction/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/service/lcypytools/mongo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/service/lcypytools/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/service/lcypytools/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#9#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/service/lcypytools/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extraction/lcypytools/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/service/segment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4802">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#46#61#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/controllers/ServiceInvokeController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/service/Service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/controllers/ServiceExtractController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1544705385997" expanded="true" signature="1393:1740" ph="..." />
-            <marker date="1544705385997" expanded="true" signature="1706:1740" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/service/segment_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/service/form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/service/form_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1544701865198" expanded="true" signature="0:68" ph="import ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call/app/service/setting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extraction/setting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="19" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extraction/segment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="623" column="39" lean-forward="false" selection-start-line="623" selection-start-column="39" selection-end-line="623" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extraction/segment_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/view.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="45" column="70" lean-forward="false" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/extraction/form.py" />
+    <entry file="file://$PROJECT_DIR$/extraction/form_demo.py" />
+    <entry file="file://$PROJECT_DIR$/extraction/README.md" />
+    <entry file="file://$PROJECT_DIR$/call/app/service/lcypytools/mongo.py" />
+    <entry file="file://$PROJECT_DIR$/call/app/service/lcypytools/README.md" />
+    <entry file="file://$PROJECT_DIR$/call/app/service/lcypytools/common.py" />
+    <entry file="file://$PROJECT_DIR$/call/app/service/lcypytools/LICENSE" />
+    <entry file="file://$PROJECT_DIR$/extraction/lcypytools/common.py" />
+    <entry file="file://$PROJECT_DIR$/call/run.py" />
+    <entry file="file://$PROJECT_DIR$/call/app/service/segment.py" />
+    <entry file="file://$PROJECT_DIR$/call/app/controllers/ServiceInvokeController.py" />
+    <entry file="file://$PROJECT_DIR$/call/app/service/Service.py" />
+    <entry file="file://$PROJECT_DIR$/call/app/controllers/ServiceExtractController.py" />
+    <entry file="file://$PROJECT_DIR$/call/requirements.txt" />
+    <entry file="file://$PROJECT_DIR$/call/app/service/segment_demo.py" />
+    <entry file="file://$PROJECT_DIR$/call/app/service/form.py" />
+    <entry file="file://$PROJECT_DIR$/call/app/service/form_demo.py" />
+    <entry file="file://$PROJECT_DIR$/call/app/service/setting.py" />
+    <entry file="file://$PROJECT_DIR$/extraction/setting.py" />
+    <entry file="file://$PROJECT_DIR$/extraction/segment.py" />
+    <entry file="file://$PROJECT_DIR$/extraction/segment_demo.py" />
+    <entry file="file://$PROJECT_DIR$/extraction/nlp_invoke/nlp_invoke/view.py" />
   </component>
 </project>

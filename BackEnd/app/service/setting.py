@@ -24,10 +24,10 @@ CHROME_BINARY_LOCATION_LOCAL = "/Applications/Google Chrome.app/Contents/MacOS/G
 HOST_LOCAL = "127.0.0.1"
 MONGO_HOST_LOCAL = "127.0.0.1"
 
-MYSQL_PATH = "192.168.9.50"
-MYSQL_USER = "root"
-MYSQL_PW  = "my-secret-pw"
-MYSQL_DB = "service_network_v3"
+# MYSQL_PATH = "127.0.0.1"
+# MYSQL_USER = "root"
+# MYSQL_PW  = "my-secret-pw"
+# MYSQL_DB = "service_network_v3"
 
 PRODUCTION = False   ## 当该值为false时，表示本地配置；为true时，表示开发配置
 

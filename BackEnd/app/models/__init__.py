@@ -1,1 +1,1 @@
-from app.models import device,api
+from app.models import device,ServiceFullEntity,ServiceDetailEntity

@@ -1,12 +1,12 @@
 from app import app
 from flask_cors import CORS
 from flask import jsonify, request
-from app.models.api import Api
+from app.models.ServiceFullEntity import Api
 from app.service.Service import Crawler, image_filter, text_filter, select_result_parameter, iterator_judge
 import requests
 from urllib.parse import urljoin
 from pyquery import PyQuery as pq
-from app.service.ConnectMySQL import MYSQL
+from app.dao.ServiceDetailDAO import MYSQL
 import app.service.setting  as setting
 from app.service.CallService import  CallService
 from app.service.Util import shutdown_crawl
@@ -196,7 +196,7 @@ def add_service():
 
         #########################
         if setting.PRODUCTION:
-            mysql = MYSQL(setting.MYSQL_PATH, setting.MYSQL_USER, setting.MYSQL_PW, setting.MYSQL_DB)
+            mysql = MYSQL()
             mysql.insertOneToGrid_API(Api.objects(api_id=service.api_id).first())
             mysql.close()
 
@@ -220,7 +220,7 @@ def add_service():
             service_exist = Api.objects(api_id=request.args.get('api_id')).first()
             if service_exist:
                 if setting.PRODUCTION:
-                    mysql = MYSQL(setting.MYSQL_PATH, setting.MYSQL_USER, setting.MYSQL_PW, setting.MYSQL_DB)
+                    mysql = MYSQL()
                     mysql.deleteOneToGrid_API(service_exist)
                     mysql.close()
 
@@ -290,7 +290,7 @@ def add_service():
                     call_result = ", " + resp
                 #########################
                 if setting.PRODUCTION:
-                    mysql = MYSQL(setting.MYSQL_PATH, setting.MYSQL_USER, setting.MYSQL_PW, setting.MYSQL_DB)
+                    mysql = MYSQL()
                     mysql.insertOneToGrid_API(service_exist_all, True)
                     mysql.close()
 

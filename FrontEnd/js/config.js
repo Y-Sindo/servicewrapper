@@ -1,2 +1,4 @@
-export let analyzeServer = "http://183.129.170.180:18088/"
-export let wrapServer = "http://service.cheosgrid.org:8089/"
+var analyzeServer = "http://127.0.0.1:8000/"
+var wrapServer = "http://127.0.0.1:8000/"
+export analyzeServer
+export wrapServer
