@@ -15,8 +15,6 @@ class CallService:
         for request_parameter in self.service.api_request_parameters_candidate:
             if request_parameter["required"]:
                 required_parameters.append(request_parameter)
-
-
         self.crawl.input_key = []
         self.crawl.input_value = []
         for level_1_parameter in required_parameters:

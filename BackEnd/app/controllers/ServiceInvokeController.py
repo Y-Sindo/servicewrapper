@@ -10,21 +10,8 @@ from app.dao.ServiceDetailDAO import MYSQL
 import app.service.setting  as setting
 from app.service.CallService import  CallService
 from app.service.Util import shutdown_crawl
-
+from app.response.Respone import RESPONSEENUM as ReNum
 CORS(app, resources=r'/*')
-
-# @app.route('/todo/api/v1/device', methods=['GET', 'POST'])
-# def device_get():
-#     if request.method == 'GET':
-#         device_all = Device.objects().all()
-#         return jsonify({'device': Device.objects.all()}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
-#     elif request.method == 'POST':
-#         if not 'devicename' in request.json or not 'macaddr' in request.json:
-#             print(request.json)
-#             app.logger.debug(request.json)
-#             abort(400)
-#         device = Device(devicename=request.json['devicename'], macaddr=request.json['macaddr']).save();
-#         return jsonify({}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
 
 @app.route('/service', methods=['POST', 'GET', 'PUT', 'DELETE'])
 def add_service():
@@ -122,12 +109,9 @@ def add_service():
         :example
             http://service.cheosgrid.org:8089/service?api_id=1
     :return:
-        NORMAL:
-                {'status':10000, 'msg':'请求成功', 'data':service},200  GET PUT POST
-                {'status':10000, 'msg':'请求成功', 'data':''}, 200  DELETE
-                {'status': 400, 'msg': '参数错误', 'data':''}, 200
-                {'status': 401, 'msg': '服务不存在', 'data': ''}, 200
-                {'status': 402, 'msg': '已有该服务', 'data': ''}, 200
+        ReNum.SUCCESS
+        ReNum.PARAM_ERR
+        ReNum.SERV_NO_EXIST
     '''
 
     if request.method == "POST":
@@ -200,7 +184,8 @@ def add_service():
             mysql.insertOneToGrid_API(Api.objects(api_id=service.api_id).first())
             mysql.close()
 
-        return jsonify({"status":10000, 'msg': '请求成功'+call_result, 'data': Api.objects(api_id=service.api_id).first()}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+        return ReNum.SUCCESS.update(Api.objects(api_id=service.api_id).first(),call_result).value()
+
         # except:
         #     app.logger.error("service - 参数错误")
         #     return jsonify({'status': 400, 'msg': '参数错误', 'data': ''})
@@ -212,8 +197,8 @@ def add_service():
             service_exist = Api.objects(api_id=request.args.get('api_id')).first()
         else:
             app.logger.error("service - 参数错误")
-            return jsonify({'status': 400, 'msg': '参数错误', 'data': ''}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
-        return jsonify({'status': 10000, 'msg': '请求成功', 'data': service_exist}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+            return ReNum.PARAM_ERR.value()
+        return ReNum.SUCCESS.update(service_exist).value()
 
     elif request.method == "DELETE":
         if request.args.get('api_id'):
@@ -226,17 +211,17 @@ def add_service():
 
                 service_exist.delete()
 
-            return jsonify({'status': 10000, 'msg': '请求成功', 'data': ''}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+            return ReNum.SUCCESS.value()
         else:
             app.logger.error("service - 参数错误")
-            return jsonify({'status': 400, 'msg': '参数错误', 'data': ''}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+            return ReNum.PARAM_ERR.value()
 
     elif request.method == "PUT":
         try:
             service_exist = Api.objects(api_id=request.json['api_id']).first()
             if not service_exist:
                 app.logger.error("service - 服务不存在")
-                return jsonify({'status': 401, 'msg': '服务不存在', 'data': ''}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+                return ReNum.SERV_NO_EXIST.value()
             else:
                 service_exist.update(api_name=request.json['api_name'],
                               api_description=request.json['api_description'],
@@ -294,10 +279,10 @@ def add_service():
                     mysql.insertOneToGrid_API(service_exist_all, True)
                     mysql.close()
 
-                return jsonify({'status': 10000, 'msg': '请求成功'+call_result, 'data': Api.objects(api_id=service_exist.api_id).first()}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+                return ReNum.SUCCESS.update(Api.objects(api_id=service_exist.api_id).first(), call_result).value()
         except:
             app.logger.error("service - 参数错误")
-            return jsonify({'status': 400, 'msg': '参数错误', 'data': ''}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+            return ReNum.PARAM_ERR.value()
 
 @app.route('/all_service', methods=['GET'])
 def get_all_service():
@@ -305,9 +290,10 @@ def get_all_service():
     获得所有api
     http://service.cheosgrid.org:8089/all_service GET
     :return:
+    ReNum.Success
     '''
     service_all = Api.objects().all()
-    return jsonify({'status': 10000, 'msg': '请求成功', 'data': service_all}),200, {'Content-Type': 'application/json;chaset=utf-8'}
+    return ReNum.SUCCESS.update(service_all).value()
 
 @app.route('/call_service/<api_id>', methods=['GET'])
 def url_construct(api_id):
@@ -367,7 +353,7 @@ def url_construct(api_id):
     request_parameters_for_judge_required = list(request.args.keys())
     if not set(candidate_required_parameters).issubset(set(request_parameters_for_judge_required)):
         not_have_required = ",".join(list(set(candidate_required_parameters).difference(set(request_parameters_for_judge_required))))
-        return jsonify({'status': 426, 'msg': '缺少必须的参数: '+not_have_required, 'data': ''}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+        return ReNum.PARAM_LACK.update('', ": "+not_have_required).value()
 
     # 可使用的请求参数集合  实际请求的请求参数集合
     request_parameters = [i for i in request_parameters_ori if i in candidate_parameters]
@@ -381,7 +367,7 @@ def url_construct(api_id):
             api_crawl_rules_two = requests.get(api_crawl_rules_link).json()
             api_crawl_rules = api_crawl_rules_two[service.main_sec_id]
         except:
-            return jsonify({'status': 403, 'msg': '请求失败，服务器请求爬虫规则失败', 'data': ''}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+            return ReNum.REQUEST_ERROR.value()
 
         try:
             crawl = Crawler(app.logger)
@@ -437,12 +423,12 @@ def url_construct(api_id):
 
             if time_out_judge == "timeout":
                 shutdown_crawl(crawl)
-                return jsonify({'status': 425, 'msg': '爬虫超时', 'data': ''}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+                return ReNum.CRAW_TIME_OUT.value()
 
         except Exception as e:
             shutdown_crawl(crawl)
             app.logger.error(repr(e))
-            return jsonify({'status': 410, 'msg': '爬虫失败，超时或请求错误:'+str(e), 'data': ''}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+            return ReNum.CRAW_ERROR.update('', ":"+str(e)).value()
         try:
             results = []
             message_error_return = []  # 将加载失败的页数记录在此，之后返回回去
@@ -538,7 +524,7 @@ def url_construct(api_id):
         except Exception as e:
             shutdown_crawl(crawl)
             app.logger.error(e)
-            return jsonify({'status': 411, 'msg': '解析失败，网页信息错误'+str(e), 'data': ''}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+            return ReNum.PAGE_PAESE_FAIL.update('',str(e)).value()
 
         new_result = []
         if len(results)>0:
@@ -564,14 +550,14 @@ def url_construct(api_id):
         shutdown_crawl(crawl)
         msg = ""
         if len(message_error_return) > 0:
-            msg = "请求成功，共处理"+str(current_page)+"页，其中第" + ",".join(message_error_return) + "页处理失败."
+            msg = "，共处理"+str(current_page)+"页，其中第" + ",".join(message_error_return) + "页处理失败."
         else:
-            msg = "请求成功，共处理"+str(current_page)+"页."
+            msg = "，共处理"+str(current_page)+"页."
         if len(cha_set) > 0:
             msg = msg + " 请求参数中 " + "，".join(cha_set) +" 未起作用，请核实【tip:请按照query_name查询】."
-        return jsonify({'status': 200, 'msg': msg, 'data': new_result}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+        return ReNum.SUCCESS.update(new_result,msg).value()
     else:
-        return jsonify({'status': 201, 'msg': '缺失api_crawl_rules_link文件或candidate项，无法处理网页', 'data': ""}), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+        return ReNum.INVOKE_LACK_DOC.value()
 
 @app.errorhandler(404)
 def page_not_found(error):

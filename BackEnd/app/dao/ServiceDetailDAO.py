@@ -52,13 +52,18 @@ class MYSQL:
             'data': service.api_result_example
         }
         result = json.dumps(result_ex, ensure_ascii=False).replace("'","\\'")   ## result
-        error_code = [{'错误码': 200, '说明': '请求成功,共处理x页,其中第a,b页处理失败. 或者 请求成功,共处理x页'}, \
-        {'错误码': 201, '说明': '缺失api_crawl_rules_link文件或candidate项，无法处理网页'}, \
-        {'错误码': 403, '说明': '请求失败，服务器请求爬虫规则失败'}, \
-        {'错误码': 410, '说明': '爬虫失败，超时或请求错误'}, \
-        {'错误码': 411, '说明': '解析失败，网页信息错误'}, \
-        {'错误码': 425, '说明': '爬虫超时'}, \
-        {'错误码': 426, '说明': '缺少必须的参数'}]
+        error_code = [
+                         {'错误码': 10000, '说明': '请求成功,共处理x页,其中第a,b页处理失败. 或者 请求成功,共处理x页'}, \
+                         {'错误码': 4000, '说明': 'Parameters error'}, \
+                         {'错误码': 4001, '说明': '缺少必须的参数'}, \
+                         {'错误码': 5000, '说明': 'Service does not exist'}, \
+                         {'错误码': 5001, '说明': 'The service already exists'}, \
+                         {'错误码': 6001, '说明': '缺失api_crawl_rules_link文件或candidate项，无法处理网页'}, \
+                         {'错误码': 7000, '说明': '爬虫超时'}, \
+                         {'错误码': 7001, '说明': '爬虫失败，超时或请求错误'}, \
+                         {'错误码': 8000, '说明': '服务器请求爬虫规则失效'}, \
+                         {'错误码': 8001, '说明': '解析失败，网页信息错误'}
+                     ]
         error_code = json.dumps(error_code, ensure_ascii=False).replace("'","\\'")   ## error_code
         if not update:  #直接上传的
             servicedetail = ServiceDetails(name=service.api_name,
