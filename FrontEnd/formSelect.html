@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
     <title>表单选择</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
@@ -147,7 +148,7 @@
                 this.form_info.form_check = 1
                 console.log("post data", JSON.stringify(this.form_info))
                 $.ajax({
-                        url: analyzeServer + "servicewrapper_update/",
+                        url: analyzeServer + "servicewrapper",
                         type: "POST",
                         data: JSON.stringify(this.form_info),
                         contentType: "application/json; charset=utf-8",
@@ -199,7 +200,7 @@
                 }, 1000)
             },
             jump2Package() {
-                window.location.href = "select.html"
+                window.location.href = "mainTextSelect.html"
             }
         },
         created() {

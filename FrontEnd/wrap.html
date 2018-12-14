@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
     <title>包装</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
@@ -133,9 +134,10 @@
                 $.ajax({
                     url: wrapServer + "service",
                     type: "POST",
+                    // crossOrigin: true,
                     data: JSON.stringify(this.api_info),
                     contentType: "application/json; charset=utf-8",
-                    dataType: "json",
+                    // dataType: "json",
                     success: function (result) {
                         console.log("post API success", result)
                         if (result.status != 10000) {
@@ -145,6 +147,10 @@
                             window.location.href = "test.html?api_id=" + result.data.api_id
                         }
                         this.resultText = "成功生成API"
+                    },
+                    fail: function(re,me){
+                        console(re);
+                        console(me);
                     }
                 })
             }

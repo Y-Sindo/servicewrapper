@@ -11,8 +11,9 @@ import app.service.setting  as setting
 from app.service.CallService import  CallService
 from app.service.Util import shutdown_crawl
 from app.response.Respone import RESPONSEENUM as ReNum
+from app.service.Util import read_file_as_str
+import json
 CORS(app, resources=r'/*')
-
 @app.route('/service', methods=['POST', 'GET', 'PUT', 'DELETE'])
 def add_service():
     '''
@@ -132,7 +133,7 @@ def add_service():
                       api_crawl_rules_link=request.json['api_crawl_rules_link'],
                       img_link=request.json['img_link'],
                       json_link=request.json['json_link']).save()
-        service.update(url="http://service.cheosgrid.org:8089/call_service/"+str(service.api_id))
+        service.update(url=setting.SERVER_ADDRESS+"call_service/"+str(service.api_id))
 
         candidates = service.candidate
         ## 针对service进行修改，对每个candidate增加query_name 字段
@@ -151,7 +152,13 @@ def add_service():
         }]
         api_request_parameters_candidate_level1 = []
         if service.form_rules_link:
-            form_list = requests.get(service.form_rules_link).json()
+
+            form_rules_link_ex = service.form_rules_link.split('/statics/', 1)[1]
+            strss = read_file_as_str("static/" + form_rules_link_ex)
+            form_list = json.loads(strss)
+            # form_list = requests.get(service.form_rules_link).json()
+
+
             if form_list["form_check"] == 1:  # 如果有参数
                 input_list = form_list["forms"][form_list["main_form_index"]]["input_list"]
                 for input in input_list:  # 模拟表单操作
@@ -164,6 +171,7 @@ def add_service():
                             "example": input["value"],
                             "description": "[查询输入参数]: " + input["description"]
                         })
+
         api_request_parameters_candidate = api_request_parameters_candidate_level0 + api_request_parameters_candidate_level1 + api_request_parameters_candidate_level2
         service.update(api_request_parameters_candidate=api_request_parameters_candidate)
 
@@ -179,10 +187,10 @@ def add_service():
             call_result = ", "+resp
 
         #########################
-        if setting.PRODUCTION:
-            mysql = MYSQL()
-            mysql.insertOneToGrid_API(Api.objects(api_id=service.api_id).first())
-            mysql.close()
+
+        mysql = MYSQL()
+        mysql.insertOneToGrid_API(Api.objects(api_id=service.api_id).first())
+
 
         return ReNum.SUCCESS.update(Api.objects(api_id=service.api_id).first(),call_result).value()
 
@@ -204,10 +212,9 @@ def add_service():
         if request.args.get('api_id'):
             service_exist = Api.objects(api_id=request.args.get('api_id')).first()
             if service_exist:
-                if setting.PRODUCTION:
-                    mysql = MYSQL()
-                    mysql.deleteOneToGrid_API(service_exist)
-                    mysql.close()
+
+                mysql = MYSQL()
+                mysql.deleteOneToGrid_API(service_exist)
 
                 service_exist.delete()
 
@@ -249,7 +256,10 @@ def add_service():
                 }]
                 api_request_parameters_candidate_level1 = []
                 if service_exist.form_rules_link:
-                    form_list = requests.get(service_exist.form_rules_link).json()
+                    form_rules_link_ex = service_exist.form_rules_link.split('/statics/', 1)[1]
+                    strss = read_file_as_str("static/" + form_rules_link_ex)
+                    form_list = json.loads(strss)
+                    # form_list = requests.get(service_exist.form_rules_link).json()
                     if form_list["form_check"] == 1:  # 如果有参数
                         input_list = form_list["forms"][form_list["main_form_index"]]["input_list"]
                         for input in input_list:  # 模拟表单操作
@@ -274,16 +284,18 @@ def add_service():
                 if resp.startswith("Error"):
                     call_result = ", " + resp
                 #########################
-                if setting.PRODUCTION:
-                    mysql = MYSQL()
-                    mysql.insertOneToGrid_API(service_exist_all, True)
-                    mysql.close()
+
+                mysql = MYSQL()
+                mysql.insertOneToGrid_API(service_exist_all, True)
 
                 return ReNum.SUCCESS.update(Api.objects(api_id=service_exist.api_id).first(), call_result).value()
         except:
             app.logger.error("service - 参数错误")
             return ReNum.PARAM_ERR.value()
-
+    else:
+        return "503 wrong information"
+    # elif request.method == "OPTIONS":
+    #     return ""
 @app.route('/all_service', methods=['GET'])
 def get_all_service():
     '''
@@ -364,7 +376,10 @@ def url_construct(api_id):
 
     if api_crawl_rules_link and api_parameters:
         try:
-            api_crawl_rules_two = requests.get(api_crawl_rules_link).json()
+            form_rules_link_ex = api_crawl_rules_link.split('/statics/', 1)[1]
+            strss = read_file_as_str("static/" + form_rules_link_ex)
+            api_crawl_rules_two = json.loads(strss)
+            # api_crawl_rules_two = requests.get(api_crawl_rules_link).json()
             api_crawl_rules = api_crawl_rules_two[service.main_sec_id]
         except:
             return ReNum.REQUEST_ERROR.value()
@@ -417,7 +432,11 @@ def url_construct(api_id):
 
 
             if form_rules_link:
-                crawl.form_list = requests.get(form_rules_link).json()
+                form_rules_link_ex = form_rules_link.split('/statics/', 1)[1]
+                strss = read_file_as_str("static/" + form_rules_link_ex)
+                crawl.form_list = json.loads(strss)
+
+                # crawl.form_list = requests.get(form_rules_link).json()
 
             time_out_judge = crawl.segment(api_url)
 

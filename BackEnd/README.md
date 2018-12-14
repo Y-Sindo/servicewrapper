@@ -1,13 +1,13 @@
-## 服务包装的调用模块
+## Service Wrapper
 
-#### 相关技术和框架
-
-- nginx
-- docker
+#### Technologies and Frameworks
+- web segment
 - flask
 - mongodb
-- gunicorn
 - selenium headless-chrome browsermobproxy
+- nginx
+- docker
+- gunicorn
 
 #### 部署方式
 

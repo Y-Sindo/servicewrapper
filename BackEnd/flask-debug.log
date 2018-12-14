@@ -1,0 +1,457 @@
+2018-12-14 20:46:17,481 - INFO - ServiceInvokeController.py - add_service - 135 - service:中国地震台网——快捷查询 - url:None
+2018-12-14 20:46:40,621 - INFO - ServiceInvokeController.py - add_service - 135 - service:中国地震台网——快捷查询 - url:None
+2018-12-14 20:46:40,629 - INFO - ServiceInvokeController.py - add_service - 142 - service:中国地震台网——快捷查询 - url:None
+2018-12-14 20:47:03,759 - INFO - ServiceInvokeController.py - add_service - 135 - service:中国地震台网——快捷查询 - url:None
+2018-12-14 20:47:03,767 - INFO - ServiceInvokeController.py - add_service - 142 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 20:47:26,407 - INFO - ServiceInvokeController.py - add_service - 135 - service:中国地震台网——快捷查询 - url:None
+2018-12-14 20:47:26,414 - INFO - ServiceInvokeController.py - add_service - 142 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 20:48:10,441 - INFO - ServiceInvokeController.py - add_service - 135 - service:中国地震台网——快捷查询 - url:None
+2018-12-14 20:48:10,448 - INFO - ServiceInvokeController.py - add_service - 142 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 20:48:10,449 - INFO - ServiceInvokeController.py - add_service - 153 - here
+2018-12-14 20:49:09,748 - INFO - ServiceInvokeController.py - add_service - 153 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 20:50:26,836 - ERROR - app.py - log_exception - 1560 - Exception on /service [POST]
+Traceback (most recent call last):
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/lxy/LabProjects/serviceWrapper/BackEnd/app/controllers/ServiceInvokeController.py", line 154, in add_service
+    form_list = requests.get(service.form_rules_link).json()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/requests/models.py", line 896, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/anaconda3/envs/flask-web/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/anaconda3/envs/flask-web/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/anaconda3/envs/flask-web/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-14 20:51:40,327 - ERROR - app.py - log_exception - 1560 - Exception on /service [POST]
+Traceback (most recent call last):
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/lxy/LabProjects/serviceWrapper/BackEnd/app/controllers/ServiceInvokeController.py", line 154, in add_service
+    form_list = requests.get(service.form_rules_link).json()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/requests/models.py", line 896, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/anaconda3/envs/flask-web/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/anaconda3/envs/flask-web/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/anaconda3/envs/flask-web/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-14 20:54:24,304 - ERROR - app.py - log_exception - 1560 - Exception on /service [POST]
+Traceback (most recent call last):
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/lxy/LabProjects/serviceWrapper/BackEnd/app/controllers/ServiceInvokeController.py", line 154, in add_service
+    form_list = requests.get(service.form_rules_link).json()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/requests/models.py", line 896, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/anaconda3/envs/flask-web/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/anaconda3/envs/flask-web/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/anaconda3/envs/flask-web/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-14 20:59:39,813 - INFO - ServiceInvokeController.py - add_service - 153 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 20:59:39,813 - INFO - ServiceInvokeController.py - add_service - 155 - form_list.json
+2018-12-14 21:06:21,330 - INFO - ServiceInvokeController.py - add_service - 153 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 21:06:21,330 - INFO - ServiceInvokeController.py - add_service - 155 - form_list.json
+2018-12-14 21:07:03,653 - ERROR - app.py - log_exception - 1560 - Exception on /service [POST]
+Traceback (most recent call last):
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/lxy/LabProjects/serviceWrapper/BackEnd/app/controllers/ServiceInvokeController.py", line 156, in add_service
+    form_list = requests.get(service.form_rules_link).json()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/requests/models.py", line 896, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/anaconda3/envs/flask-web/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/anaconda3/envs/flask-web/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/anaconda3/envs/flask-web/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-14 21:10:22,989 - INFO - ServiceInvokeController.py - add_service - 153 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 21:10:22,989 - INFO - ServiceInvokeController.py - add_service - 155 - form_list.json
+2018-12-14 21:14:06,609 - INFO - ServiceInvokeController.py - add_service - 154 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 21:15:16,208 - INFO - ServiceInvokeController.py - add_service - 155 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 21:15:16,209 - INFO - ServiceInvokeController.py - add_service - 162 - should be here
+2018-12-14 21:15:49,062 - INFO - ServiceInvokeController.py - add_service - 155 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 21:15:49,062 - INFO - ServiceInvokeController.py - add_service - 162 - form_list:
+2018-12-14 21:17:05,758 - INFO - ServiceInvokeController.py - add_service - 155 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 21:17:05,758 - INFO - ServiceInvokeController.py - add_service - 160 - {
+	"url": "http://gujia.mlr.gov.cn/JGPublish/Publish/Index",
+	"form_check": 1,
+	"main_form_index": 0,
+	"forms": [
+		{
+			"id": 2,
+			"main_btn_index": 0,
+			"len": 28,
+			"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f>  html > body:nth-child(2) > form",
+			"input_list": [
+				{
+					"id": 0,
+					"type": "text",
+					"name": "no_key_name_36",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span > input:nth-child(2)",
+					"value": "123",
+					"query_name": "no_key_name_36",
+					"description": "",
+					"index": "T1",
+					"form_type": 1
+				},
+				{
+					"id": 1,
+					"type": "select",
+					"name": "no_key_name_127",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > select",
+					"value": 0,
+					"query_name": "no_key_name_127",
+					"description": "",
+					"index": "T2",
+					"form_type": 1
+				},
+				{
+					"id": 2,
+					"type": "text",
+					"name": "no_key_name_154",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input",
+					"value": "",
+					"query_name": "no_key_name_154",
+					"description": "",
+					"index": "T3",
+					"form_type": 1
+				}
+			],
+			"submit_button_list": [
+				{
+					"id": 0,
+					"type": "button",
+					"name": "no_key_name_37",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span:nth-child(2) > input",
+					"index": "b1",
+					"form_type": 1
+				},
+				{
+					"id": 1,
+					"type": "button",
+					"name": "no_key_name_155",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input:nth-child(2)",
+					"index": "b2",
+					"form_type": 1
+				}
+			],
+			"type": 1
+		}
+	]
+}
+2018-12-14 21:17:05,761 - INFO - ServiceInvokeController.py - add_service - 164 - form_list:
+2018-12-14 21:17:19,590 - INFO - ServiceInvokeController.py - add_service - 155 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 21:17:19,590 - INFO - ServiceInvokeController.py - add_service - 160 - {
+	"url": "http://gujia.mlr.gov.cn/JGPublish/Publish/Index",
+	"form_check": 1,
+	"main_form_index": 0,
+	"forms": [
+		{
+			"id": 2,
+			"main_btn_index": 0,
+			"len": 28,
+			"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f>  html > body:nth-child(2) > form",
+			"input_list": [
+				{
+					"id": 0,
+					"type": "text",
+					"name": "no_key_name_36",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span > input:nth-child(2)",
+					"value": "123",
+					"query_name": "no_key_name_36",
+					"description": "",
+					"index": "T1",
+					"form_type": 1
+				},
+				{
+					"id": 1,
+					"type": "select",
+					"name": "no_key_name_127",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > select",
+					"value": 0,
+					"query_name": "no_key_name_127",
+					"description": "",
+					"index": "T2",
+					"form_type": 1
+				},
+				{
+					"id": 2,
+					"type": "text",
+					"name": "no_key_name_154",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input",
+					"value": "",
+					"query_name": "no_key_name_154",
+					"description": "",
+					"index": "T3",
+					"form_type": 1
+				}
+			],
+			"submit_button_list": [
+				{
+					"id": 0,
+					"type": "button",
+					"name": "no_key_name_37",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span:nth-child(2) > input",
+					"index": "b1",
+					"form_type": 1
+				},
+				{
+					"id": 1,
+					"type": "button",
+					"name": "no_key_name_155",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input:nth-child(2)",
+					"index": "b2",
+					"form_type": 1
+				}
+			],
+			"type": 1
+		}
+	]
+}
+2018-12-14 21:17:19,653 - INFO - ServiceInvokeController.py - add_service - 164 - {'url': 'http://gujia.mlr.gov.cn/JGPublish/Publish/Index', 'form_check': 1, 'main_form_index': 0, 'forms': [{'id': 2, 'main_btn_index': 0, 'len': 28, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f>  html > body:nth-child(2) > form', 'input_list': [{'id': 0, 'type': 'text', 'name': 'no_key_name_36', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span > input:nth-child(2)', 'value': '123', 'query_name': 'no_key_name_36', 'description': '', 'index': 'T1', 'form_type': 1}, {'id': 1, 'type': 'select', 'name': 'no_key_name_127', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > select', 'value': 0, 'query_name': 'no_key_name_127', 'description': '', 'index': 'T2', 'form_type': 1}, {'id': 2, 'type': 'text', 'name': 'no_key_name_154', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input', 'value': '', 'query_name': 'no_key_name_154', 'description': '', 'index': 'T3', 'form_type': 1}], 'submit_button_list': [{'id': 0, 'type': 'button', 'name': 'no_key_name_37', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span:nth-child(2) > input', 'index': 'b1', 'form_type': 1}, {'id': 1, 'type': 'button', 'name': 'no_key_name_155', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input:nth-child(2)', 'index': 'b2', 'form_type': 1}], 'type': 1}]}
+2018-12-14 21:18:32,721 - INFO - ServiceInvokeController.py - add_service - 155 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 21:18:32,722 - INFO - ServiceInvokeController.py - add_service - 160 - {
+	"url": "http://gujia.mlr.gov.cn/JGPublish/Publish/Index",
+	"form_check": 0,
+	"main_form_index": 0,
+	"forms": [
+		{
+			"id": 2,
+			"main_btn_index": 0,
+			"len": 28,
+			"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f>  html > body:nth-child(2) > form",
+			"input_list": [
+				{
+					"id": 0,
+					"type": "text",
+					"name": "no_key_name_36",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span > input:nth-child(2)",
+					"value": "123",
+					"query_name": "no_key_name_36",
+					"description": "",
+					"index": "T1",
+					"form_type": 1
+				},
+				{
+					"id": 1,
+					"type": "select",
+					"name": "no_key_name_127",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > select",
+					"value": 0,
+					"query_name": "no_key_name_127",
+					"description": "",
+					"index": "T2",
+					"form_type": 1
+				},
+				{
+					"id": 2,
+					"type": "text",
+					"name": "no_key_name_154",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input",
+					"value": "",
+					"query_name": "no_key_name_154",
+					"description": "",
+					"index": "T3",
+					"form_type": 1
+				}
+			],
+			"submit_button_list": [
+				{
+					"id": 0,
+					"type": "button",
+					"name": "no_key_name_37",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span:nth-child(2) > input",
+					"index": "b1",
+					"form_type": 1
+				},
+				{
+					"id": 1,
+					"type": "button",
+					"name": "no_key_name_155",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input:nth-child(2)",
+					"index": "b2",
+					"form_type": 1
+				}
+			],
+			"type": 1
+		}
+	]
+}
+2018-12-14 21:18:32,723 - INFO - ServiceInvokeController.py - add_service - 164 - {'url': 'http://gujia.mlr.gov.cn/JGPublish/Publish/Index', 'form_check': 0, 'main_form_index': 0, 'forms': [{'id': 2, 'main_btn_index': 0, 'len': 28, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f>  html > body:nth-child(2) > form', 'input_list': [{'id': 0, 'type': 'text', 'name': 'no_key_name_36', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span > input:nth-child(2)', 'value': '123', 'query_name': 'no_key_name_36', 'description': '', 'index': 'T1', 'form_type': 1}, {'id': 1, 'type': 'select', 'name': 'no_key_name_127', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > select', 'value': 0, 'query_name': 'no_key_name_127', 'description': '', 'index': 'T2', 'form_type': 1}, {'id': 2, 'type': 'text', 'name': 'no_key_name_154', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input', 'value': '', 'query_name': 'no_key_name_154', 'description': '', 'index': 'T3', 'form_type': 1}], 'submit_button_list': [{'id': 0, 'type': 'button', 'name': 'no_key_name_37', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span:nth-child(2) > input', 'index': 'b1', 'form_type': 1}, {'id': 1, 'type': 'button', 'name': 'no_key_name_155', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input:nth-child(2)', 'index': 'b2', 'form_type': 1}], 'type': 1}]}
+2018-12-14 21:19:11,383 - INFO - ServiceInvokeController.py - add_service - 155 - http://127.0.0.1:8000/statics/form_list.json
+2018-12-14 21:19:11,408 - INFO - ServiceInvokeController.py - add_service - 160 - {
+	"url": "http://gujia.mlr.gov.cn/JGPublish/Publish/Index",
+	"form_check": 0,
+	"main_form_index": 0,
+	"forms": [
+		{
+			"id": 2,
+			"main_btn_index": 0,
+			"len": 28,
+			"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f>  html > body:nth-child(2) > form",
+			"input_list": [
+				{
+					"id": 0,
+					"type": "text",
+					"name": "no_key_name_36",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span > input:nth-child(2)",
+					"value": "123",
+					"query_name": "no_key_name_36",
+					"description": "",
+					"index": "T1",
+					"form_type": 1
+				},
+				{
+					"id": 1,
+					"type": "select",
+					"name": "no_key_name_127",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > select",
+					"value": 0,
+					"query_name": "no_key_name_127",
+					"description": "",
+					"index": "T2",
+					"form_type": 1
+				},
+				{
+					"id": 2,
+					"type": "text",
+					"name": "no_key_name_154",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input",
+					"value": "",
+					"query_name": "no_key_name_154",
+					"description": "",
+					"index": "T3",
+					"form_type": 1
+				}
+			],
+			"submit_button_list": [
+				{
+					"id": 0,
+					"type": "button",
+					"name": "no_key_name_37",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span:nth-child(2) > input",
+					"index": "b1",
+					"form_type": 1
+				},
+				{
+					"id": 1,
+					"type": "button",
+					"name": "no_key_name_155",
+					"required": false,
+					"css_selector": "html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input:nth-child(2)",
+					"index": "b2",
+					"form_type": 1
+				}
+			],
+			"type": 1
+		}
+	]
+}
+2018-12-14 21:19:11,409 - INFO - ServiceInvokeController.py - add_service - 164 - {'url': 'http://gujia.mlr.gov.cn/JGPublish/Publish/Index', 'form_check': 0, 'main_form_index': 0, 'forms': [{'id': 2, 'main_btn_index': 0, 'len': 28, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f>  html > body:nth-child(2) > form', 'input_list': [{'id': 0, 'type': 'text', 'name': 'no_key_name_36', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span > input:nth-child(2)', 'value': '123', 'query_name': 'no_key_name_36', 'description': '', 'index': 'T1', 'form_type': 1}, {'id': 1, 'type': 'select', 'name': 'no_key_name_127', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > select', 'value': 0, 'query_name': 'no_key_name_127', 'description': '', 'index': 'T2', 'form_type': 1}, {'id': 2, 'type': 'text', 'name': 'no_key_name_154', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input', 'value': '', 'query_name': 'no_key_name_154', 'description': '', 'index': 'T3', 'form_type': 1}], 'submit_button_list': [{'id': 0, 'type': 'button', 'name': 'no_key_name_37', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > div:nth-child(8) > div > span:nth-child(2) > input', 'index': 'b1', 'form_type': 1}, {'id': 1, 'type': 'button', 'name': 'no_key_name_155', 'required': False, 'css_selector': 'html > body:nth-child(2) > form > div:nth-child(7) > div > div:nth-child(2) > div:nth-child(2) > iframe:nth-child(3) >f> html > body:nth-child(2) > form > table:nth-child(9) > tfoot:nth-child(3) > tr > td > div:nth-child(5) > div:nth-child(7) > input:nth-child(2)', 'index': 'b2', 'form_type': 1}], 'type': 1}]}
+2018-12-14 21:21:43,028 - ERROR - app.py - log_exception - 1560 - Exception on /service [POST]
+Traceback (most recent call last):
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/anaconda3/envs/flask-web/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/lxy/LabProjects/serviceWrapper/BackEnd/app/controllers/ServiceInvokeController.py", line 196, in add_service
+    return ReNum.SUCCESS.update(Api.objects(api_id=service.api_id).first(),call_result).value()
+AttributeError: 'RESPONSEENUM' object has no attribute 'update'
+2018-12-14 21:35:54,321 - INFO - Service.py - __init__ - 54 - /Users/lxy/LabProjects/serviceWrapper/BackEnd
+2018-12-14 21:35:54,322 - INFO - Service.py - segment - 299 - Crawl HTML Document from http://www.ceic.ac.cn/speedsearch?time=7,please wait for about 60s(max 120s)

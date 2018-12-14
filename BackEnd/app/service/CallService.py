@@ -4,6 +4,8 @@ from app import app
 from app.service.Util import shutdown_crawl
 from pyquery import PyQuery as pq
 from urllib.parse import urljoin
+from app.service.Util import read_file_as_str
+import json
 class CallService:
     def __init__(self, service):
         self.service = service
@@ -137,7 +139,12 @@ class CallService:
         api_url = self.service.api_url
         if api_crawl_rules_link and api_parameters:
             try:
-                api_crawl_rules_two = requests.get(api_crawl_rules_link).json()
+
+                form_rules_link_ex = api_crawl_rules_link.split('/statics/', 1)[1]
+                strss = read_file_as_str("static/" + form_rules_link_ex)
+                api_crawl_rules_two = json.loads(strss)
+
+                # api_crawl_rules_two = requests.get(api_crawl_rules_link).json()
                 self.api_crawl_rules = api_crawl_rules_two[self.service.main_sec_id]
             except:
                 return "Error by service details"
@@ -152,7 +159,10 @@ class CallService:
                 self.wait_condition()   # 设置加载网页的等待条件
 
                 if form_rules_link:
-                    self.crawl.form_list = requests.get(form_rules_link).json()
+                    form_rules_link_ex = form_rules_link.split('/statics/', 1)[1]
+                    strss = read_file_as_str("static/" + form_rules_link_ex)
+                    self.crawl.form_list = json.loads(strss)
+                    # self.crawl.form_list = requests.get(form_rules_link).json()
 
                 time_out_judge = self.crawl.segment(api_url)
 

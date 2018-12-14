@@ -624,7 +624,8 @@ class Segment:
             rect = t["rect"]
             draw.rectangle([(rect["left"], rect["top"]), (rect["right"], rect["bottom"])],
                            fill=(0, 0, 255, 64))  # 块所在位置的框
-            font = ImageFont.truetype(os.path.dirname(__file__) + "HEI.ttf", size=30,
+            print(os.path.dirname(__file__) + "/HEI.ttf")
+            font = ImageFont.truetype(os.path.dirname(__file__) + "/HEI.ttf", size=30,
                                       encoding="unic")  # 设置字体,注意linux里如果没有字体需要指定/usr/share/fonts/HEI.ttf
             if len(self.candidate) - i < 10:  # 数字阴影长度
                 l = 20

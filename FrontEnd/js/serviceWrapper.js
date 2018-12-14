@@ -5,7 +5,7 @@ $(document).ready(function () {
     let logUrl = ""
     let logTask
     let isStaticWrap = true
-
+    console.log("11");
     function getUrlParam(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)")
         var r = window.location.search.substr(1).match(reg)
@@ -16,7 +16,7 @@ $(document).ready(function () {
     function staticWrap() {
         isStaticWrap = true
         let url = $("#url_text").val()
-        $.get(analyzeServer + "servicewrapper/?url=" + url, function (result) {
+        $.get(analyzeServer + "servicewrapper?url=" + url, function (result) {
             console.log("请求开始包装服务的结果", result)
             logUrl = result
             let time = 70
@@ -61,8 +61,9 @@ $(document).ready(function () {
 
     function dynamicWrap() {
         isStaticWrap = false
-        let url = $("#url_text").val()
-        $.get(analyzeServer + "formdetector/?url=" + url, function (result) {
+        console.log("click");
+        let url = $("#url_text").val();
+        $.get(analyzeServer + "formdetector?url=" + url, function (result) {
             console.log("请求开始包装服务的结果", result)
             logUrl = result
             let time = 70
@@ -112,6 +113,8 @@ $(document).ready(function () {
                     })
             }, 1000)
 
+        }).fail(function(jqXHR, textStatus, errorThrown){
+            console.log("错误",jqXHR,textStatus,errorThrown);
         })
     }
 

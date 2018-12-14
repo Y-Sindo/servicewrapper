@@ -6,7 +6,7 @@ import requests
 from app.models.ServiceDetailEntity import ServiceDetails
 class MYSQL:
     def __init__(self):
-        pass
+        self.me = ''
 
     def deleteOneToGrid_API(self, service):
         service_exist = ServiceDetails.objects(api_address=service.url).first()

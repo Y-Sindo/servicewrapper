@@ -54,7 +54,7 @@ class JSONIFY:
     {'错误码': 8001, '说明': '解析失败，网页信息错误'}, \
 ]    
 '''
-class RESPONSEENUM(Enum):
+class RESPONSEENUM():
     SUCCESS =  RESPONSE(JSONIFY(10000, 'Request success', ''))
 
     PARAM_ERR = RESPONSE(JSONIFY(4000, 'Parameters error', ''))
