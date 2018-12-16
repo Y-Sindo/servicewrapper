@@ -651,7 +651,8 @@ class Segment:
             description = self.browser.title
         self.api_info["api_description"] = description
         self.api_info["api_url"] = self.url
-        self.api_info["img_link"] = setting.SERVER_ADDRESS + self.output_folder + "/seg_shot.png"
+        self.api_info["img_link"] = setting.SERVER_ADDRESS + self.output_folder.replace("static",
+                                                                                         "statics") + "/seg_shot.png"
         # self.api_info["img_seg_link"] = setting.SERVER_ADDRESS + self.output_folder + "/seg_shot.png"
         self.api_info["api_crawl_rules_link"] = setting.SERVER_ADDRESS + self.output_folder.replace("static",
                                                                                                     "statics") + "/rules_list.json"

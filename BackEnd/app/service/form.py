@@ -72,7 +72,8 @@ class Form:
         self.log.write("Finished on  %s" % self.url)
         self.log.write_without_datetime(
             "200 " + setting.SERVER_ADDRESS + self.output_folder.replace("static",
-                                                                         "statics") + "/form_list.json " + setting.SERVER_ADDRESS + self.output_folder + "/form_seg_shot.png")
+                                                                         "statics") + "/form_list.json " + setting.SERVER_ADDRESS + self.output_folder.replace("static",
+                                                                         "statics") + "/form_seg_shot.png")
 
     """
     通过下面的操作，程序得到了整个网页中所有的tag节点的信息，并按照广度优先搜索的顺序，存储到了self.allnodes列表中

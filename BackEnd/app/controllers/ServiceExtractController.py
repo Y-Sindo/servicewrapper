@@ -1,11 +1,12 @@
 from app import app
 from flask_cors import CORS
-from flask import jsonify, request
+from flask import jsonify, request, send_file, Response
 import os
 import time
 import random
 import json
 import numpy as np
+from PIL import Image
 import app.service.setting as setting
 from app.service.Util import read_file_as_str
 CORS(app, resources=r'/*')
@@ -66,6 +67,11 @@ def formdetector():
 def get_static_resource(path, string):
     if string.endswith("json"):
         return read_file_as_str("static/" + path + "/" + string), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+    elif string.endswith("png"):
+
+        with open("static/" + path + "/"  + string, 'rb') as f:
+            image = f.read()
+        return Response(image, mimetype="image/png")
     else:
         return read_file_as_str("static/" + path + "/"  + string)
 
@@ -73,6 +79,10 @@ def get_static_resource(path, string):
 def get_static_resource_one(string):
     if string.endswith("json"):
         return read_file_as_str("static/" + string), 200, {'Content-Type': 'application/json;chaset=utf-8'}
+    elif string.endswith("png"):
+        with open("static/" + string, 'rb') as f:
+            image = f.read()
+        return Response(image, mimetype="image/png")
     else:
         return read_file_as_str("static/" + string)
 
