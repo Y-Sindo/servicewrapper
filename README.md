@@ -5,19 +5,19 @@ of web pages' source data. The service wrapper system is designed to encapsulate
 
 We use [a web segment algorithm](https://github.com/liaocyintl/WebSegment), which converts a HTML document into structured data,  to get the metadata location description information，and  then  wrap it up as a service.
 
-![未标题-1](/Users/lxy/Desktop/%E6%9C%AA%E6%A0%87%E9%A2%98-1.png)
+![未标题-1](http://cmsci.net/lvxy/servicewrapper/tree/master/FrontEnd/main_page.png)
 
-#### Getting Started
+## Getting Started
 
 Service Wrapper adopts a front-end separation architecture, as you can see, the folder `BackEnd` is the back-end code, while the folder `FrontEnd` is the front-end code.
 
 Service Wrapper  has been tested on many flavors of Linux, MacOS, and Windows, so you can run Service Wrapper on any OS or in the cloud. We provide two different configurations for development and production environments. 
 
-###### clone
+#### clone
 
 ```git clone git@www.cmsci.net:lvxy/servicewrapper.git```
 
-###### Development Environment
+#### Development Environment
 
 To run the back end code:
 
@@ -42,7 +42,7 @@ http-server --cors  ./ index.html  # index.html is the start page
 
 ```
 
-######  Production Environment
+#### Production Environment
 
 You can run Service Wrapper in the production environment that has Docker 1.11+ and Docker compose installed.
 
