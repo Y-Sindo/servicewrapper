@@ -109,27 +109,26 @@ Service Wrapper将封装的网页分为`静态网页`和`动态网页`， 其中
 
 - 第一步，打开起始网页--网页分析，在`Input 1`中输入`需要封装的网页的网址`, 点击`Click 1`。在解析日志窗口可看到解析日志`Extraction Log 1`，当出现`Click 2`按钮后，点击可进入至下一网页—表单选择。
 
-![image-20181221202654044](/Users/lxy/Library/Application Support/typora-user-images/image-20181221202654044.png)
+![image-20181221202654044](/Users/lxy/Desktop/step1.png)
 
 
 
 - 第二步，在网页—表单选择中，根据”表单分块图“在`Select 1`中选择对应的表单编号，下侧的”自定义输入参数“会随之更改。在`Input 2`中输入或者更改参数名称、输入示例值和描述信息；在`Select 2`中选择输入参数后确定的按钮。（需要注意的是，在Input 2中输入的输入示例值，系统后台将自动将之填入对应区域，并点击`Select 2`中选择的按钮，进行获取数据。） 点击`Click 3`将对网页进行服务提取，可以在`Extraction 2`中看到解析日志。当出现`Click 4`按钮后，点击可进入至下一网页—正文及结果项选择。
 
-![image-20181222010931277](/Users/lxy/Library/Application Support/typora-user-images/image-20181222010931277.png)
+![image-20181222010931277](/Users/lxy/Desktop/step3.png)
 
 - 第三步，在网页—正文及结果项选择中，根据”网页分块图“在`Select 3`中选择对应的表单编号，下侧的网页块中的文本信息会随之更改。在选择完成后，点击`Click 5`进入下一网页--包装。
 
-![image-20181222195034843](/Users/lxy/Library/Application Support/typora-user-images/image-20181222195034843.png)
+![image-20181222195034843](/Users/lxy/Desktop/step4.png)
 
 - 第四步，在网页—包装中，可以在`Input 3`中看到API的基本信息和所提取到的数据默认信息，可以根据实际情况在`Input 3`中进行修改。修改完成后，点击`Click 6`即完成了服务包装工作。下一步，会进入服务调用示例网页--测试。
 
-![image-20181222202636589](/Users/lxy/Library/Application Support/typora-user-images/image-20181222202636589.png)
+![image-20181222202636589](/Users/lxy/Desktop/step5.png)
 
 - 第五步，在完成服务提取后，服务包装者需要通过测试来查看服务提取的结果是否正确，参数是否成功。在测试页面中，”最大页数“参数是一个超参数，独立于服务之外，表示此次获取数据会提取网页中的多少页内的数据，默认最高为5页。”输入参数“为步骤二所填写的参数，指将以这些参数作为条件进行数据查询；”筛选参数“为步骤四所填写的参数，指获取到的所有数据将根据此处的参数做一次筛选，只返回满足该参数条件的数据。
 
-![image-20181222203341328](/Users/lxy/Library/Application Support/typora-user-images/image-20181222203341328.png)
+![image-20181222203341328](/Users/lxy/Desktop/step 6.png)
 
 
 
 静态网页和动态网页的操作步骤基本一致，只是缺少的步骤二，即静态网页包装由上述步骤一，步骤三，步骤四和步骤五组成。
-
