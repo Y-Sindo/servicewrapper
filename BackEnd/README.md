@@ -1,7 +1,6 @@
 ## Service Wrapper
 
-#### Technologies and Frameworks
-- web segment
+#### Frameworks
 - flask
 - mongodb
 - selenium headless-chrome browsermobproxy

@@ -622,6 +622,8 @@ class Segment:
             im2 = Image.new("RGBA", (im.size[0], im.size[1]))
             draw = ImageDraw.Draw(im2)
             rect = t["rect"]
+
+
             draw.rectangle([(rect["left"], rect["top"]), (rect["right"], rect["bottom"])],
                            fill=(0, 0, 255, 64))  # 块所在位置的框
             print(os.path.dirname(__file__) + "/HEI.ttf")

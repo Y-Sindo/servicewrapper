@@ -285,6 +285,7 @@ class Form:
             im2 = Image.new("RGBA", (im.size[0], im.size[1]))
             draw = ImageDraw.Draw(im2)
             rect = t["rect"]
+
             draw.rectangle([(rect["left"] + position_slot["left"], rect["top"] + position_slot["top"]),
                             (rect["right"] + position_slot["left"], rect["bottom"] + position_slot["top"])],
                            fill=(0, 0, 255, 64))  # 块所在位置的框
