@@ -1,4 +1,0 @@
-2018-12-19 15:38:00.514827 -> Crawl HTML Document from http://www.ceic.ac.cn/speedsearch?time=7,please wait for about 40s(max 60s)
-2018-12-19 15:38:06.289370 -> Finding form lable on http://www.ceic.ac.cn/speedsearch?time=7
-2018-12-19 15:38:07.451223 -> Finished on  http://www.ceic.ac.cn/speedsearch?time=7
-200 http://127.0.0.1:8000/statics/15452050774719/form_list.json http://127.0.0.1:8000/statics/15452050774719/form_seg_shot.png
