@@ -4,7 +4,7 @@
 
 **Service Wrapper** implements the backend functions through **Service extraction** and **Service invocation**, and provides a series of simple **front-end webpages** to assist users to complete the whole operation process. The **service extraction** is oriented to the **service wrapper**. The module uses the crawler and the web page segmentation technology to obtain the core metadata location of the webpage, and generates a webpage segmentation rule according to the location of the data in the webpage, and stores it in the database. The **service invocation ** is oriented to the service caller, which provides description information and invocation methods of RESTFul API for each service. After the service caller making the correct invocation, the module returns structured data. At the same time, the system provides a series of front-end webpages including service extraction pages, service invocation pages and service information display pages, helping users to use conveniently.
 
-![arch](servicewrapper/FrontEnd/img/arch.png)
+![arch](https://github.com/lsummer/servicewrapper/raw/master/FrontEnd/img/arch.png)
 
 
 
