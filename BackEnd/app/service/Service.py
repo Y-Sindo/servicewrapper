@@ -28,7 +28,7 @@ class Crawler:
             path = setting.DRIVER_PATH_PRODUCTION
         else:
             options.binary_location = setting.CHROME_BINARY_LOCATION_LOCAL
-            path = os.path.dirname(__file__) + "/driver/chromedriver"  # upload 修改
+            path = os.path.dirname(__file__) + setting.DRIVER_PATH_PRODUCTION_LOCAL  # upload 修改
 
         # options.add_argument("--proxy-server={0}".format(self.proxy.proxy))
         # print(self.proxy.proxy)

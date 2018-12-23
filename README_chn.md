@@ -25,19 +25,17 @@
 后端技术栈包含：
 
 - `flask`
-
 - `chrome driver`
-
 - `selenium`
-
 - `mongodb`
-
 - `nginx`
-
 - `docker-compose`
-
 - `gunicorn`
 
+## 配置
+
+- [后端配置](https://github.com/lsummer/servicewrapper/blob/master/BackEnd/README_chn.md)
+- [前端配置](https://github.com/lsummer/servicewrapper/blob/master/FrontEnd/README.md)
 
 ## 快速开始
 

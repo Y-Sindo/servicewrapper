@@ -21,6 +21,7 @@ HOST_PRODUCTION_OUT_ADDRESS = "http://service.cheosgrid.org:8089/"  # External n
 
 # local config
 CHROME_BINARY_LOCATION_LOCAL = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+DRIVER_PATH_PRODUCTION_LOCAL = "/driver/chromedriver"
 HOST_LOCAL = "127.0.0.1"
 MONGO_HOST_LOCAL = "127.0.0.1"
 

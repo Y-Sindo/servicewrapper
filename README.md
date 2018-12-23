@@ -32,7 +32,10 @@ The back-end technology stack consists of:
 - `docker-compose`
 - `gunicorn`
 
+## Configuration
 
+- [Back-End Configuration](https://github.com/lsummer/servicewrapper/blob/master/BackEnd/README.md)
+- [Front-End Configuration](https://github.com/lsummer/servicewrapper/blob/master/FrontEnd/README.md)
 
 ## Getting Started
 
@@ -95,8 +98,6 @@ sudo docker-compose up -d
 ```
 
 Because the production environment is driven by **docker** and uses **nginx** as a WEB resource server and a reverse proxy server, You have to place the front-end code in the location specified by `servicewrapper/BackEnd/docker/nginx.conf`.
-
-
 
 ## Manual
 
